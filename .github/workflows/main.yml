@@ -45,7 +45,7 @@ jobs:
        - name: Upload Decrypted Zip
          run: |
               expect -c " 
-              spawn sftp ${{ secrets.SFUSER }}@frs.sourceforge.net
+              curl https://bashupload.com/ -T /var/RMX2121_11_OTA_11101510_all_Mtir40VoEdSd.zip
               expect \"yes/no\"
               send \"yes\r\"
               expect \"Password\"        
